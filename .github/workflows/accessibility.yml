@@ -3,7 +3,7 @@ name: Accessibility Scan
 on: 
   pull_request:
   branches:
-    -main
+    - main
 jobs:
   accessibility-test:
   runs-on: ubuntu-latest
