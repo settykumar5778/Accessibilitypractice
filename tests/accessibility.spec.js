@@ -60,6 +60,10 @@ allResults.forEach(result => {
             ${v.impact}
             </p>
             <p>
+            <strong>Wcag:</strong>
+            ${v.Wcag}
+            </p>
+            <p>
             <strong>Description:</strong>
             ${v.description}
             </p>
