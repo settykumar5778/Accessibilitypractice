@@ -86,5 +86,6 @@ fs.writeFileSync(
     'a11y-report.html',
     htmlContent
 );
+console.log("Accessibility Scan Started");
 console.log("Report Created Successfully");
 });
