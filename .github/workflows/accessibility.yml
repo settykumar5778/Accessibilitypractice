@@ -21,7 +21,7 @@ jobs:
     run: npm Install
 
   - name: Install Playwright Browsers
-    run: npx playwright Install
+    run: npx playwright Install --with-deps
 
   - name: Run Accessibility Scan
     run: npx playwright test
