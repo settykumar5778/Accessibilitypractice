@@ -1,39 +1,40 @@
 name: Accessibility Scan
 
-on: 
+on:
   pull_request:
-  branches:
-    - main
+    branches:
+      - main
+
 jobs:
   accessibility-test:
-  runs-on: ubuntu-latest
+    runs-on: ubuntu-latest
 
-  steps:
-  - name: checkout Repository
-    uses: actions/checkout@v4
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-  - name: Setup NodeJS
-    uses: actions/setup-node@v4
-    with:
-      node-version: 20
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
 
-  - name: Install Dependencies
-    run: npm Install
+      - name: Install dependencies
+        run: npm install
 
-  - name: Install Playwright Browsers
-    run: npx playwright Install --with-deps
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps
 
-  - name: Run Accessibility Scan
-    run: npx playwright test
+      - name: Run accessibility scan
+        run: npx playwright test
 
-  - name: Upload JSON Report
-    uses: actions/upload-artifact@v4
-    with:
-       name: A11y-JSON-Report
-       path: a11y-report.json
+      - name: Upload JSON report
+        uses: actions/upload-artifact@v4
+        with:
+          name: A11y-JSON-Report
+          path: multi-page-report.json 
 
-  - name: Upload HTML Report
-    uses: actions/upload-artifact@v4
-    with:
-       name: A11y-HTML-Report
-       path: a11y-report.html
+      - name: Upload HTML report
+        uses: actions/upload-artifact@v4
+        with:
+          name: A11y-HTML-Report
+          path: a11y-report.html
