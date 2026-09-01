@@ -35,7 +35,7 @@ jobs:
           path: a11y-report.json 
 
       - name: Upload HTML report
-        if: always
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: A11y-HTML-Report
