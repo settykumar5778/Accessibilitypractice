@@ -28,9 +28,7 @@ test('Scan Multiple Pages', async ({page}) => {
                );
         if (criticalOrSeriousIssues.length > 0) {
 
-            throw new Error(
-                'Critical/Serious accessibility violations found: ${url}: 
-                ${criticalOrSeriousIssues.length}'
+            throw new Error('Critical/Serious accessibility violations found: ${url}: ${criticalOrSeriousIssues.length}'
             );
         }
 
