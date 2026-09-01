@@ -12,6 +12,13 @@ test('Scan Multiple Pages', async ({page}) => {
         await page.goto(url);
         const results = 
         await new AxeBuilder({page}).analyze();
+        const violationCount = 
+        results.violations.length;
+        if (violationCount > 0) {
+            throw new Error(
+                'Accessibility violations found: ${violationCount}'
+            );
+        }
 
         allResults.push({ 
             page: url, 
