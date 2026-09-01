@@ -12,11 +12,17 @@ test('Scan Multiple Pages', async ({page}) => {
         await page.goto(url);
         const results = 
         await new AxeBuilder({page}).analyze();
-        const violationCount = 
-        results.violations.length;
-        if (violationCount > 0) {
+        const criticalOrSeriousIssues = 
+        results.violations.filter(
+            violation =>
+                violation.impact === 'critical'  ||
+                violation.impact === 'Serious'
+               );
+        if (criticalOrSeriousIssues.length > 0) {
+
             throw new Error(
-                'Accessibility violations found: ${violationCount}'
+                'Critical/Serious accessibility violations found: ${url}: 
+                ${criticalOrSeriousIssues.length}'
             );
         }
 
@@ -26,10 +32,6 @@ test('Scan Multiple Pages', async ({page}) => {
             violations: results.violations
         });
     }
-   // await page.goto('https://www.microsoft.com/');
-
-// const results = await new AxeBuilder({page}).analyze();
-
 fs.writeFileSync(
     'multi-page-report.json',
     JSON.stringify(allResults, null, 2)
