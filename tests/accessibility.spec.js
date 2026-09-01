@@ -10,6 +10,14 @@ test('Scan Multiple Pages', async ({page}) => {
     for (const url of pages) {
         console.log(`Scanning: ${url}`);
         await page.goto(url);
+        const filename = 
+        url.replace(/https?:\/\//, "")
+        .replace(/[\/:\.?&=]/g, "_");
+        
+        await page.screenshot({
+            path: 'screenshots/${fileName}.png',
+            fullPage: true
+        });
         const results = 
         await new AxeBuilder({page}).analyze();
         const criticalOrSeriousIssues = 
