@@ -41,7 +41,6 @@ test('Scan Multiple Pages', async ({page}) => {
                 violation.impact === 'Serious'
                );
         if (criticalOrSeriousIssues.length > 0) {
-
             throw new Error(`Critical/Serious accessibility violations found: ${url}: ${criticalOrSeriousIssues.length}`
             );
         }
@@ -105,7 +104,6 @@ allResults.forEach(result => {
         } );
      }
 });
-
 htmlContent += `
 </body>
 </html>

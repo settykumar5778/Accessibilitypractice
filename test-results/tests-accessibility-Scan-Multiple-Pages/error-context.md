@@ -717,107 +717,106 @@ Error: Critical/Serious accessibility violations found: https://apple.com: 1
   41  |                 violation.impact === 'Serious'
   42  |                );
   43  |         if (criticalOrSeriousIssues.length > 0) {
-  44  | 
-> 45  |             throw new Error(`Critical/Serious accessibility violations found: ${url}: ${criticalOrSeriousIssues.length}`
+> 44  |             throw new Error(`Critical/Serious accessibility violations found: ${url}: ${criticalOrSeriousIssues.length}`
       |                   ^ Error: Critical/Serious accessibility violations found: https://apple.com: 1
-  46  |             );
-  47  |         }
-  48  | 
-  49  |         allResults.push({ 
-  50  |             page: url, 
-  51  |             violationsCount: results.violations.length,
-  52  |             violations: results.violations
-  53  |         });
-  54  |     }
-  55  | fs.writeFileSync(
-  56  |     'multi-page-report.json',
-  57  |     JSON.stringify(allResults, null, 2)
-  58  | );
-  59  | let htmlContent = `
-  60  | <html> 
-  61  | <head> 
-  62  | <title>A11y Report</title>
-  63  | </head>
-  64  | <body>
-  65  | <h1>Accessibility Report<h1>
-  66  | `;
-  67  | 
-  68  | allResults.forEach(result => {
-  69  | 
-  70  |     htmlContent += `
-  71  |     <h2>Page: ${result.page}</h2>
-  72  |     <p>
-  73  |        <strong>Total Violations: </strong>
-  74  |        ${result.violationCount}
-  75  |     </p> 
-  76  |      `;
-  77  | 
-  78  |      if (result.violationCount === 0) {
-  79  |         htmlContent += `
-  80  |         <p>No Accessibility Violations Found</p>
-  81  |         `;
-  82  |      }
-  83  |      else {
-  84  |         result.violations.forEach(v => {
-  85  |             htmlContent += `
-  86  |             <h3>${v.id}</h3>
-  87  |             <p>
-  88  |             <strong>Impact: </strong>
-  89  |             ${v.impact}
-  90  |             </p>
-  91  |             <p>
-  92  |             <strong>Wcag:</strong>
-  93  |             ${v.Wcag}
-  94  |             </p>
-  95  |             <p>
-  96  |             <strong>Description:</strong>
-  97  |             ${v.description}
-  98  |             </p>
-  99  |             <p>
-  100 |             <strong>Help:</strong>
-  101 |             ${v.help}
-  102 |             </p>
-  103 |             <hr>
-  104 |             `;
-  105 |         } );
-  106 |      }
-  107 | });
-  108 | 
-  109 | htmlContent += `
-  110 | </body>
-  111 | </html>
-  112 | `;
-  113 | 
-  114 | const summarySection = `
-  115 | <h2>Accessibility Summary</h2>
-  116 | 
-  117 | <p><strong>Critical:</strong> ${criticalCount}</p>
-  118 | <p><strong>Serious:</strong> ${seriousCount}</p>
-  119 | <p><strong>Moderate:</strong> ${moderateCount}</p>
-  120 | <p><strong>Minor:</strong> ${minorCount}</p>
-  121 | 
-  122 | <p>
-  123 | <strong>Accessibility Score:</strong>
-  124 | ${accessibilityScore}%
-  125 | </p>
-  126 | 
-  127 | <p>
-  128 | <strong>Status:</strong>
-  129 | ${
-  130 |     criticalCount > 0 ||
-  131 |     seriousCount > 0
-  132 |     ? 'Fail'
-  133 |     : 'PASS'
-  134 | }
-  135 | </p>
-  136 | <hr>
-  137 | `;
-  138 | htmlContent = summarySection + htmlContent;
-  139 | fs.writeFileSync(
-  140 |     'a11y-report.html',
-  141 |     htmlContent
-  142 | );
-  143 | let accessibilityScore =
-  144 |  100 - (
-  145 |     criticalCount * 10 +
+  45  |             );
+  46  |         }
+  47  | 
+  48  |         allResults.push({ 
+  49  |             page: url, 
+  50  |             violationsCount: results.violations.length,
+  51  |             violations: results.violations
+  52  |         });
+  53  |     }
+  54  | fs.writeFileSync(
+  55  |     'multi-page-report.json',
+  56  |     JSON.stringify(allResults, null, 2)
+  57  | );
+  58  | let htmlContent = `
+  59  | <html> 
+  60  | <head> 
+  61  | <title>A11y Report</title>
+  62  | </head>
+  63  | <body>
+  64  | <h1>Accessibility Report<h1>
+  65  | `;
+  66  | 
+  67  | allResults.forEach(result => {
+  68  | 
+  69  |     htmlContent += `
+  70  |     <h2>Page: ${result.page}</h2>
+  71  |     <p>
+  72  |        <strong>Total Violations: </strong>
+  73  |        ${result.violationCount}
+  74  |     </p> 
+  75  |      `;
+  76  | 
+  77  |      if (result.violationCount === 0) {
+  78  |         htmlContent += `
+  79  |         <p>No Accessibility Violations Found</p>
+  80  |         `;
+  81  |      }
+  82  |      else {
+  83  |         result.violations.forEach(v => {
+  84  |             htmlContent += `
+  85  |             <h3>${v.id}</h3>
+  86  |             <p>
+  87  |             <strong>Impact: </strong>
+  88  |             ${v.impact}
+  89  |             </p>
+  90  |             <p>
+  91  |             <strong>Wcag:</strong>
+  92  |             ${v.Wcag}
+  93  |             </p>
+  94  |             <p>
+  95  |             <strong>Description:</strong>
+  96  |             ${v.description}
+  97  |             </p>
+  98  |             <p>
+  99  |             <strong>Help:</strong>
+  100 |             ${v.help}
+  101 |             </p>
+  102 |             <hr>
+  103 |             `;
+  104 |         } );
+  105 |      }
+  106 | });
+  107 | htmlContent += `
+  108 | </body>
+  109 | </html>
+  110 | `;
+  111 | 
+  112 | const summarySection = `
+  113 | <h2>Accessibility Summary</h2>
+  114 | 
+  115 | <p><strong>Critical:</strong> ${criticalCount}</p>
+  116 | <p><strong>Serious:</strong> ${seriousCount}</p>
+  117 | <p><strong>Moderate:</strong> ${moderateCount}</p>
+  118 | <p><strong>Minor:</strong> ${minorCount}</p>
+  119 | 
+  120 | <p>
+  121 | <strong>Accessibility Score:</strong>
+  122 | ${accessibilityScore}%
+  123 | </p>
+  124 | 
+  125 | <p>
+  126 | <strong>Status:</strong>
+  127 | ${
+  128 |     criticalCount > 0 ||
+  129 |     seriousCount > 0
+  130 |     ? 'Fail'
+  131 |     : 'PASS'
+  132 | }
+  133 | </p>
+  134 | <hr>
+  135 | `;
+  136 | htmlContent = summarySection + htmlContent;
+  137 | fs.writeFileSync(
+  138 |     'a11y-report.html',
+  139 |     htmlContent
+  140 | );
+  141 | let accessibilityScore =
+  142 |  100 - (
+  143 |     criticalCount * 10 +
+  144 |     seriousCount * 5 +
 ```
