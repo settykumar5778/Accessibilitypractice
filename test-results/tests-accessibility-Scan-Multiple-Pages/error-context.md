@@ -7,12 +7,12 @@
 # Test info
 
 - Name: tests\accessibility.spec.js >> Scan Multiple Pages
-- Location: tests\accessibility.spec.js:36:1
+- Location: tests\accessibility.spec.js:39:1
 
 # Error details
 
 ```
-Error: Accessibility Quality Gate Failed. Critical/Serious Issues Found: 4
+Error: Accessibility Quality Gate Failed. Critical/Serious Issues Found: 6
 ```
 
 # Page snapshot
@@ -230,323 +230,319 @@ Error: Accessibility Quality Gate Failed. Critical/Serious Issues Found: 4
       - generic [ref=f1e219]:
         - img "A flatscreen television showing a video of all Apple services available on Apple TV" [ref=f1e221]
         - figure [ref=f1e224]:
-          - generic [ref=f1e225]:
-            - text: "|"
-            - link [ref=f1e226] [cursor=pointer]:
-              - /url: https://tv.apple.com/in/show/the-studio/umc.cmc.7518algxc4lsoobtsx30dqb52?itscg=10000&itsct=atv--services-stream4-apl-250915
-              - text: The Studio
-        - button "pause big screen video" [ref=f1e228] [cursor=pointer]
-      - generic [ref=f1e231]:
-        - generic [ref=f1e232]:
-          - img "learn more about apple tv" [ref=f1e235]
-          - heading "Stream award-winning Apple Originals on every screen." [level=2] [ref=f1e236]
-          - generic [ref=f1e237]:
-            - link "try apple tv free" [ref=f1e238] [cursor=pointer]:
+          - generic [ref=f1e225]: "|Hozier Nobody’s Soldier"
+        - button "pause big screen video" [ref=f1e227] [cursor=pointer]
+      - generic [ref=f1e230]:
+        - generic [ref=f1e231]:
+          - img "learn more about apple tv" [ref=f1e234]
+          - heading "Stream award-winning Apple Originals on every screen." [level=2] [ref=f1e235]
+          - generic [ref=f1e236]:
+            - link "try apple tv free" [ref=f1e237] [cursor=pointer]:
               - /url: https://tv.apple.com/in?itscg=10000&itsct=pod-services-tv-apl-tvhm-21_1019
               - text: Try it free
-              - superscript [ref=f1e239]: "1"
-            - link "learn more about apple tv" [ref=f1e240] [cursor=pointer]:
+              - superscript [ref=f1e238]: "1"
+            - link "learn more about apple tv" [ref=f1e239] [cursor=pointer]:
               - /url: /in/apple-tv-plus/
               - text: Learn more
-              - generic [ref=f1e241]: 
-        - generic [ref=f1e242]:
-          - img "learn more about apple music" [ref=f1e245]
-          - heading "All music. Highest audio quality. Zero ads." [level=2] [ref=f1e246]
-          - generic [ref=f1e247]:
-            - link "try it free, 2 footnote, apple music" [ref=f1e248] [cursor=pointer]:
+              - generic [ref=f1e240]: 
+        - generic [ref=f1e241]:
+          - img "learn more about apple music" [ref=f1e244]
+          - heading "All music. Highest audio quality. Zero ads." [level=2] [ref=f1e245]
+          - generic [ref=f1e246]:
+            - link "try it free, 2 footnote, apple music" [ref=f1e247] [cursor=pointer]:
               - /url: https://music.apple.com/in/?itscg=10000&itsct=pod-services-music-apl-tvhm-21_1019
               - text: Try it free
-              - superscript [ref=f1e249]: "2"
-            - link "learn more about apple music" [ref=f1e250] [cursor=pointer]:
+              - superscript [ref=f1e248]: "2"
+            - link "learn more about apple music" [ref=f1e249] [cursor=pointer]:
               - /url: /in/apple-music/
               - text: Learn more
-              - generic [ref=f1e251]: 
-        - generic [ref=f1e252]:
-          - img "learn more about apple arcade" [ref=f1e255]
-          - heading "Best collection of mobile games for every player." [level=2] [ref=f1e256]
-          - generic [ref=f1e257]:
-            - link "get started, apple arcade" [ref=f1e258] [cursor=pointer]:
+              - generic [ref=f1e250]: 
+        - generic [ref=f1e251]:
+          - img "learn more about apple arcade" [ref=f1e254]
+          - heading "Best collection of mobile games for every player." [level=2] [ref=f1e255]
+          - generic [ref=f1e256]:
+            - link "get started, apple arcade" [ref=f1e257] [cursor=pointer]:
               - /url: https://apps.apple.com/in/arcade?itscg=10000&itsct=pod-services-arcade-apl-tvhm-21_1019
               - text: Get started
-            - link "learn more about apple arcade" [ref=f1e259] [cursor=pointer]:
+            - link "learn more about apple arcade" [ref=f1e258] [cursor=pointer]:
               - /url: /in/apple-arcade/
               - text: Learn more
-              - generic [ref=f1e260]: 
-        - generic [ref=f1e261]:
-          - img "learn more about apple fitness+" [ref=f1e264]
-          - heading "From HIIT to Meditation, there’s something for everyone." [level=2] [ref=f1e265]
-          - generic [ref=f1e266]:
-            - link "try it free, 3 footnote, apple fitness+" [ref=f1e267] [cursor=pointer]:
+              - generic [ref=f1e259]: 
+        - generic [ref=f1e260]:
+          - img "learn more about apple fitness+" [ref=f1e263]
+          - heading "From HIIT to Meditation, there’s something for everyone." [level=2] [ref=f1e264]
+          - generic [ref=f1e265]:
+            - link "try it free, 3 footnote, apple fitness+" [ref=f1e266] [cursor=pointer]:
               - /url: https://fitness.apple.com/in/subscribe?itscg=10000&itsct=pod-services-fitness-apl-tvhm-21_1019
               - text: Try it free
-              - superscript [ref=f1e268]: "3"
-            - link "learn more about apple fitness+" [ref=f1e269] [cursor=pointer]:
+              - superscript [ref=f1e267]: "3"
+            - link "learn more about apple fitness+" [ref=f1e268] [cursor=pointer]:
               - /url: /in/apple-fitness-plus/
               - text: Learn more
-              - generic [ref=f1e270]: 
-  - contentinfo [ref=f1e271]:
-    - generic [ref=f1e272]:
-      - heading "Apple Footer" [level=2] [ref=f1e273]
-      - generic [ref=f1e275]:
-        - generic [ref=f1e277]:
-          - figure [ref=f1e278]
-          - heading "Free delivery and pickup" [level=3] [ref=f1e279]
-          - paragraph [ref=f1e280]: Get free delivery or pickup at your Apple Store.
-          - link "Learn more" [ref=f1e281] [cursor=pointer]:
+              - generic [ref=f1e269]: 
+  - contentinfo [ref=f1e270]:
+    - generic [ref=f1e271]:
+      - heading "Apple Footer" [level=2] [ref=f1e272]
+      - generic [ref=f1e274]:
+        - generic [ref=f1e276]:
+          - figure [ref=f1e277]
+          - heading "Free delivery and pickup" [level=3] [ref=f1e278]
+          - paragraph [ref=f1e279]: Get free delivery or pickup at your Apple Store.
+          - link "Learn more" [ref=f1e280] [cursor=pointer]:
             - /url: /in/shop/shipping-pickup
-        - generic [ref=f1e284]:
-          - figure [ref=f1e285]
-          - heading "Ways to buy" [level=5] [ref=f1e286]
-          - paragraph [ref=f1e287]: Choose the way that′s right for you.
-          - link "Learn more" [ref=f1e288] [cursor=pointer]:
+        - generic [ref=f1e283]:
+          - figure [ref=f1e284]
+          - heading "Ways to buy" [level=5] [ref=f1e285]
+          - paragraph [ref=f1e286]: Choose the way that′s right for you.
+          - link "Learn more" [ref=f1e287] [cursor=pointer]:
             - /url: /in/shop/goto/ways_to_buy
-        - generic [ref=f1e291]:
-          - figure [ref=f1e292]
-          - heading "Get help buying" [level=3] [ref=f1e293]
-          - paragraph [ref=f1e294]: Have a question? Call a Specialist or chat online.
-          - paragraph [ref=f1e295]: Call 000800 040 1966.
-          - link "Contact us" [ref=f1e296] [cursor=pointer]:
+        - generic [ref=f1e290]:
+          - figure [ref=f1e291]
+          - heading "Get help buying" [level=3] [ref=f1e292]
+          - paragraph [ref=f1e293]: Have a question? Call a Specialist or chat online.
+          - paragraph [ref=f1e294]: Call 000800 040 1966.
+          - link "Contact us" [ref=f1e295] [cursor=pointer]:
             - /url: https://contactretail.apple.com/?pg=COM:tv-home&ap=COM&c=in&l=en
-      - region "Footnotes" [ref=f1e297]:
-        - list [ref=f1e298]:
-          - listitem [ref=f1e299]: "*Listed pricing is Maximum Retail Price (inclusive of all taxes)."
-        - list [ref=f1e300]:
-          - listitem [ref=f1e301]: New subscribers only. ₹99/month after free trial. Apple TV subscription does not include third‑party branded subscription services or content available for rental or purchase in the Apple TV app. Plan automatically renews until cancelled. Terms apply.
-          - listitem [ref=f1e302]: New subscribers only. ₹139/month after free trial. Plan automatically renews until cancelled. Terms apply.
-          - listitem [ref=f1e303]: Apple Fitness+ requires iPhone 8 or later, or Apple Watch Series 3 or later paired with iPhone 6s or later. New subscribers only. ₹149/month after trial. Plan automatically renews until cancelled. Terms apply.
-      - navigation "Breadcrumbs" [ref=f1e304]:
-        - link "Apple" [ref=f1e305] [cursor=pointer]:
+      - region "Footnotes" [ref=f1e296]:
+        - list [ref=f1e297]:
+          - listitem [ref=f1e298]: "*Listed pricing is Maximum Retail Price (inclusive of all taxes)."
+        - list [ref=f1e299]:
+          - listitem [ref=f1e300]: New subscribers only. ₹99/month after free trial. Apple TV subscription does not include third‑party branded subscription services or content available for rental or purchase in the Apple TV app. Plan automatically renews until cancelled. Terms apply.
+          - listitem [ref=f1e301]: New subscribers only. ₹139/month after free trial. Plan automatically renews until cancelled. Terms apply.
+          - listitem [ref=f1e302]: Apple Fitness+ requires iPhone 8 or later, or Apple Watch Series 3 or later paired with iPhone 6s or later. New subscribers only. ₹149/month after trial. Plan automatically renews until cancelled. Terms apply.
+      - navigation "Breadcrumbs" [ref=f1e303]:
+        - link "Apple" [ref=f1e304] [cursor=pointer]:
           - /url: /in/
-          - generic [ref=f1e306]: 
-        - generic [ref=f1e308]:
+          - generic [ref=f1e305]: 
+        - generic [ref=f1e307]:
           - list:
-            - listitem [ref=f1e309]: TV & Home
-      - navigation "Apple Directory" [ref=f1e310]:
-        - generic [ref=f1e311]:
+            - listitem [ref=f1e308]: TV & Home
+      - navigation "Apple Directory" [ref=f1e309]:
+        - generic [ref=f1e310]:
           - generic:
-            - heading "Shop and Learn" [level=3] [ref=f1e312]
-            - list [ref=f1e314]:
-              - listitem [ref=f1e315]:
-                - link "Store" [ref=f1e316] [cursor=pointer]:
+            - heading "Shop and Learn" [level=3] [ref=f1e311]
+            - list [ref=f1e313]:
+              - listitem [ref=f1e314]:
+                - link "Store" [ref=f1e315] [cursor=pointer]:
                   - /url: /in/shop/goto/store
-              - listitem [ref=f1e317]:
-                - link "Mac" [ref=f1e318] [cursor=pointer]:
+              - listitem [ref=f1e316]:
+                - link "Mac" [ref=f1e317] [cursor=pointer]:
                   - /url: /in/mac/
-              - listitem [ref=f1e319]:
-                - link "iPad" [ref=f1e320] [cursor=pointer]:
+              - listitem [ref=f1e318]:
+                - link "iPad" [ref=f1e319] [cursor=pointer]:
                   - /url: /in/ipad/
-              - listitem [ref=f1e321]:
-                - link "iPhone" [ref=f1e322] [cursor=pointer]:
+              - listitem [ref=f1e320]:
+                - link "iPhone" [ref=f1e321] [cursor=pointer]:
                   - /url: /in/iphone/
-              - listitem [ref=f1e323]:
-                - link "Watch" [ref=f1e324] [cursor=pointer]:
+              - listitem [ref=f1e322]:
+                - link "Watch" [ref=f1e323] [cursor=pointer]:
                   - /url: /in/watch/
-              - listitem [ref=f1e325]:
-                - link "AirPods" [ref=f1e326] [cursor=pointer]:
+              - listitem [ref=f1e324]:
+                - link "AirPods" [ref=f1e325] [cursor=pointer]:
                   - /url: /in/airpods/
-              - listitem [ref=f1e327]:
-                - link "TV & Home" [ref=f1e328] [cursor=pointer]:
+              - listitem [ref=f1e326]:
+                - link "TV & Home" [ref=f1e327] [cursor=pointer]:
                   - /url: /in/tv-home/
-              - listitem [ref=f1e329]:
-                - link "AirTag" [ref=f1e330] [cursor=pointer]:
+              - listitem [ref=f1e328]:
+                - link "AirTag" [ref=f1e329] [cursor=pointer]:
                   - /url: /in/airtag/
-              - listitem [ref=f1e331]:
-                - link "Accessories" [ref=f1e332] [cursor=pointer]:
+              - listitem [ref=f1e330]:
+                - link "Accessories" [ref=f1e331] [cursor=pointer]:
                   - /url: /in/shop/goto/buy_accessories
-              - listitem [ref=f1e333]:
-                - link "Gift Cards" [ref=f1e334] [cursor=pointer]:
+              - listitem [ref=f1e332]:
+                - link "Gift Cards" [ref=f1e333] [cursor=pointer]:
                   - /url: /in/shop/goto/giftcards
           - generic:
-            - heading "Apple Wallet" [level=3] [ref=f1e335]
-            - list [ref=f1e337]:
-              - listitem [ref=f1e338]:
-                - link "Wallet" [ref=f1e339] [cursor=pointer]:
+            - heading "Apple Wallet" [level=3] [ref=f1e334]
+            - list [ref=f1e336]:
+              - listitem [ref=f1e337]:
+                - link "Wallet" [ref=f1e338] [cursor=pointer]:
                   - /url: /in/wallet/
-        - generic [ref=f1e340]:
+        - generic [ref=f1e339]:
           - generic:
-            - heading "Account" [level=3] [ref=f1e341]
-            - list [ref=f1e343]:
-              - listitem [ref=f1e344]:
-                - link "Manage Your Apple Account" [ref=f1e345] [cursor=pointer]:
+            - heading "Account" [level=3] [ref=f1e340]
+            - list [ref=f1e342]:
+              - listitem [ref=f1e343]:
+                - link "Manage Your Apple Account" [ref=f1e344] [cursor=pointer]:
                   - /url: https://account.apple.com/in/
-              - listitem [ref=f1e346]:
-                - link "Apple Store Account" [ref=f1e347] [cursor=pointer]:
+              - listitem [ref=f1e345]:
+                - link "Apple Store Account" [ref=f1e346] [cursor=pointer]:
                   - /url: /in/shop/goto/account
-              - listitem [ref=f1e348]:
-                - link "iCloud.com" [ref=f1e349] [cursor=pointer]:
+              - listitem [ref=f1e347]:
+                - link "iCloud.com" [ref=f1e348] [cursor=pointer]:
                   - /url: https://www.icloud.com
           - generic:
-            - heading "Entertainment" [level=3] [ref=f1e350]
-            - list [ref=f1e352]:
-              - listitem [ref=f1e353]:
-                - link "Apple One" [ref=f1e354] [cursor=pointer]:
+            - heading "Entertainment" [level=3] [ref=f1e349]
+            - list [ref=f1e351]:
+              - listitem [ref=f1e352]:
+                - link "Apple One" [ref=f1e353] [cursor=pointer]:
                   - /url: /in/apple-one/
-              - listitem [ref=f1e355]:
-                - link "Apple TV" [ref=f1e356] [cursor=pointer]:
+              - listitem [ref=f1e354]:
+                - link "Apple TV" [ref=f1e355] [cursor=pointer]:
                   - /url: /in/apple-tv/
-              - listitem [ref=f1e357]:
-                - link "Apple Music" [ref=f1e358] [cursor=pointer]:
+              - listitem [ref=f1e356]:
+                - link "Apple Music" [ref=f1e357] [cursor=pointer]:
                   - /url: /in/apple-music/
-              - listitem [ref=f1e359]:
-                - link "Apple Arcade" [ref=f1e360] [cursor=pointer]:
+              - listitem [ref=f1e358]:
+                - link "Apple Arcade" [ref=f1e359] [cursor=pointer]:
                   - /url: /in/apple-arcade/
-              - listitem [ref=f1e361]:
-                - link "Apple Fitness+" [ref=f1e362] [cursor=pointer]:
+              - listitem [ref=f1e360]:
+                - link "Apple Fitness+" [ref=f1e361] [cursor=pointer]:
                   - /url: /in/apple-fitness-plus/
-              - listitem [ref=f1e363]:
-                - link "Apple Podcasts" [ref=f1e364] [cursor=pointer]:
+              - listitem [ref=f1e362]:
+                - link "Apple Podcasts" [ref=f1e363] [cursor=pointer]:
                   - /url: /in/apple-podcasts/
-              - listitem [ref=f1e365]:
-                - link "Apple Books" [ref=f1e366] [cursor=pointer]:
+              - listitem [ref=f1e364]:
+                - link "Apple Books" [ref=f1e365] [cursor=pointer]:
                   - /url: /in/apple-books/
-              - listitem [ref=f1e367]:
-                - link "App Store" [ref=f1e368] [cursor=pointer]:
+              - listitem [ref=f1e366]:
+                - link "App Store" [ref=f1e367] [cursor=pointer]:
                   - /url: /in/app-store/
-        - generic [ref=f1e369]:
+        - generic [ref=f1e368]:
           - generic:
-            - heading "Apple Store" [level=3] [ref=f1e370]
-            - list [ref=f1e372]:
-              - listitem [ref=f1e373]:
-                - link "Find a Store" [ref=f1e374] [cursor=pointer]:
+            - heading "Apple Store" [level=3] [ref=f1e369]
+            - list [ref=f1e371]:
+              - listitem [ref=f1e372]:
+                - link "Find a Store" [ref=f1e373] [cursor=pointer]:
                   - /url: /in/retail/
-              - listitem [ref=f1e375]:
-                - link "Genius Bar" [ref=f1e376] [cursor=pointer]:
+              - listitem [ref=f1e374]:
+                - link "Genius Bar" [ref=f1e375] [cursor=pointer]:
                   - /url: /in/retail/geniusbar/
-              - listitem [ref=f1e377]:
-                - link "Today at Apple" [ref=f1e378] [cursor=pointer]:
+              - listitem [ref=f1e376]:
+                - link "Today at Apple" [ref=f1e377] [cursor=pointer]:
                   - /url: /in/today/
-              - listitem [ref=f1e379]:
-                - link "Group Reservations" [ref=f1e380] [cursor=pointer]:
+              - listitem [ref=f1e378]:
+                - link "Group Reservations" [ref=f1e379] [cursor=pointer]:
                   - /url: /in/today/groups/
-              - listitem [ref=f1e381]:
-                - link "Apple Camp" [ref=f1e382] [cursor=pointer]:
+              - listitem [ref=f1e380]:
+                - link "Apple Camp" [ref=f1e381] [cursor=pointer]:
                   - /url: /in/today/camp/
-              - listitem [ref=f1e383]:
-                - link "Apple Trade In" [ref=f1e384] [cursor=pointer]:
+              - listitem [ref=f1e382]:
+                - link "Apple Trade In" [ref=f1e383] [cursor=pointer]:
                   - /url: /in/shop/goto/trade_in
-              - listitem [ref=f1e385]:
-                - link "Ways to Buy" [ref=f1e386] [cursor=pointer]:
+              - listitem [ref=f1e384]:
+                - link "Ways to Buy" [ref=f1e385] [cursor=pointer]:
                   - /url: /in/shop/goto/ways_to_buy
-              - listitem [ref=f1e387]:
-                - link "Recycling Programme" [ref=f1e388] [cursor=pointer]:
+              - listitem [ref=f1e386]:
+                - link "Recycling Programme" [ref=f1e387] [cursor=pointer]:
                   - /url: /in/recycling/
-              - listitem [ref=f1e389]:
-                - link "Order Status" [ref=f1e390] [cursor=pointer]:
+              - listitem [ref=f1e388]:
+                - link "Order Status" [ref=f1e389] [cursor=pointer]:
                   - /url: /in/shop/goto/order/list
-              - listitem [ref=f1e391]:
-                - link "Shopping Help" [ref=f1e392] [cursor=pointer]:
+              - listitem [ref=f1e390]:
+                - link "Shopping Help" [ref=f1e391] [cursor=pointer]:
                   - /url: /in/shop/goto/help
-        - generic [ref=f1e393]:
+        - generic [ref=f1e392]:
           - generic:
-            - heading "For Business" [level=3] [ref=f1e394]
-            - list [ref=f1e396]:
-              - listitem [ref=f1e397]:
-                - link "Apple and Business" [ref=f1e398] [cursor=pointer]:
+            - heading "For Business" [level=3] [ref=f1e393]
+            - list [ref=f1e395]:
+              - listitem [ref=f1e396]:
+                - link "Apple and Business" [ref=f1e397] [cursor=pointer]:
                   - /url: /in/business/
-              - listitem [ref=f1e399]:
-                - link "Shop for Business" [ref=f1e400] [cursor=pointer]:
+              - listitem [ref=f1e398]:
+                - link "Shop for Business" [ref=f1e399] [cursor=pointer]:
                   - /url: /in/retail/business/
           - generic:
-            - heading "For Education" [level=3] [ref=f1e401]
-            - list [ref=f1e403]:
-              - listitem [ref=f1e404]:
-                - link "Apple and Education" [ref=f1e405] [cursor=pointer]:
+            - heading "For Education" [level=3] [ref=f1e400]
+            - list [ref=f1e402]:
+              - listitem [ref=f1e403]:
+                - link "Apple and Education" [ref=f1e404] [cursor=pointer]:
                   - /url: /in/education/
-              - listitem [ref=f1e406]:
-                - link "Shop for Education" [ref=f1e407] [cursor=pointer]:
+              - listitem [ref=f1e405]:
+                - link "Shop for Education" [ref=f1e406] [cursor=pointer]:
                   - /url: /in/education/k12/how-to-buy/
-              - listitem [ref=f1e408]:
-                - link "Shop for University" [ref=f1e409] [cursor=pointer]:
+              - listitem [ref=f1e407]:
+                - link "Shop for University" [ref=f1e408] [cursor=pointer]:
                   - /url: /in/shop/goto/educationrouting
           - generic:
-            - heading "For Healthcare" [level=3] [ref=f1e410]
-            - list [ref=f1e412]:
-              - listitem [ref=f1e413]:
-                - link "Apple and Healthcare" [ref=f1e414] [cursor=pointer]:
+            - heading "For Healthcare" [level=3] [ref=f1e409]
+            - list [ref=f1e411]:
+              - listitem [ref=f1e412]:
+                - link "Apple and Healthcare" [ref=f1e413] [cursor=pointer]:
                   - /url: /in/healthcare/
           - generic:
-            - heading "For Government" [level=3] [ref=f1e415]
-            - list [ref=f1e417]:
-              - listitem [ref=f1e418]:
-                - link "Apple and Government" [ref=f1e419] [cursor=pointer]:
+            - heading "For Government" [level=3] [ref=f1e414]
+            - list [ref=f1e416]:
+              - listitem [ref=f1e417]:
+                - link "Apple and Government" [ref=f1e418] [cursor=pointer]:
                   - /url: /in/government/
-        - generic [ref=f1e420]:
+        - generic [ref=f1e419]:
           - generic:
-            - heading "Apple Values" [level=3] [ref=f1e421]
-            - list [ref=f1e423]:
-              - listitem [ref=f1e424]:
-                - link "Accessibility" [ref=f1e425] [cursor=pointer]:
+            - heading "Apple Values" [level=3] [ref=f1e420]
+            - list [ref=f1e422]:
+              - listitem [ref=f1e423]:
+                - link "Accessibility" [ref=f1e424] [cursor=pointer]:
                   - /url: /in/accessibility/
-              - listitem [ref=f1e426]:
-                - link "Education" [ref=f1e427] [cursor=pointer]:
+              - listitem [ref=f1e425]:
+                - link "Education" [ref=f1e426] [cursor=pointer]:
                   - /url: /in/education-initiative/
-              - listitem [ref=f1e428]:
-                - link "Environment" [ref=f1e429] [cursor=pointer]:
+              - listitem [ref=f1e427]:
+                - link "Environment" [ref=f1e428] [cursor=pointer]:
                   - /url: /in/environment/
-              - listitem [ref=f1e430]:
-                - link "Privacy" [ref=f1e431] [cursor=pointer]:
+              - listitem [ref=f1e429]:
+                - link "Privacy" [ref=f1e430] [cursor=pointer]:
                   - /url: /in/privacy/
-              - listitem [ref=f1e432]:
-                - link "Supply Chain Innovation" [ref=f1e433] [cursor=pointer]:
+              - listitem [ref=f1e431]:
+                - link "Supply Chain Innovation" [ref=f1e432] [cursor=pointer]:
                   - /url: /in/supply-chain/
           - generic:
-            - heading "About Apple" [level=3] [ref=f1e434]
-            - list [ref=f1e436]:
-              - listitem [ref=f1e437]:
-                - link "Newsroom" [ref=f1e438] [cursor=pointer]:
+            - heading "About Apple" [level=3] [ref=f1e433]
+            - list [ref=f1e435]:
+              - listitem [ref=f1e436]:
+                - link "Newsroom" [ref=f1e437] [cursor=pointer]:
                   - /url: /in/newsroom/
-              - listitem [ref=f1e439]:
-                - link "Apple Leadership" [ref=f1e440] [cursor=pointer]:
+              - listitem [ref=f1e438]:
+                - link "Apple Leadership" [ref=f1e439] [cursor=pointer]:
                   - /url: /in/leadership/
-              - listitem [ref=f1e441]:
-                - link "Career Opportunities" [ref=f1e442] [cursor=pointer]:
+              - listitem [ref=f1e440]:
+                - link "Career Opportunities" [ref=f1e441] [cursor=pointer]:
                   - /url: /careers/in/
-              - listitem [ref=f1e443]:
-                - link "Investors" [ref=f1e444] [cursor=pointer]:
+              - listitem [ref=f1e442]:
+                - link "Investors" [ref=f1e443] [cursor=pointer]:
                   - /url: https://investor.apple.com/
-              - listitem [ref=f1e445]:
-                - link "Ethics & Compliance" [ref=f1e446] [cursor=pointer]:
+              - listitem [ref=f1e444]:
+                - link "Ethics & Compliance" [ref=f1e445] [cursor=pointer]:
                   - /url: /compliance/
-              - listitem [ref=f1e447]:
-                - link "Events" [ref=f1e448] [cursor=pointer]:
+              - listitem [ref=f1e446]:
+                - link "Events" [ref=f1e447] [cursor=pointer]:
                   - /url: /in/apple-events/
-              - listitem [ref=f1e449]:
-                - link "Contact Apple" [ref=f1e450] [cursor=pointer]:
+              - listitem [ref=f1e448]:
+                - link "Contact Apple" [ref=f1e449] [cursor=pointer]:
                   - /url: /in/contact/
-      - generic [ref=f1e451]:
-        - generic [ref=f1e452]:
+      - generic [ref=f1e450]:
+        - generic [ref=f1e451]:
           - text: "More ways to shop:"
-          - link "Find an Apple Store" [ref=f1e453] [cursor=pointer]:
+          - link "Find an Apple Store" [ref=f1e452] [cursor=pointer]:
             - /url: /in/retail/
           - text: or
-          - link "other retailer" [ref=f1e454] [cursor=pointer]:
+          - link "other retailer" [ref=f1e453] [cursor=pointer]:
             - /url: https://locate.apple.com/in/en/
           - text: near you.
-          - generic [ref=f1e455]:
+          - generic [ref=f1e454]:
             - text: Or call
-            - link "000800 040 1966" [ref=f1e456] [cursor=pointer]:
+            - link "000800 040 1966" [ref=f1e455] [cursor=pointer]:
               - /url: tel:000800 040 1966
             - text: .
-        - generic [ref=f1e457]:
-          - generic [ref=f1e458]:
-            - generic [ref=f1e459]: Copyright © 2026 Apple Inc. All rights reserved.
-            - list [ref=f1e460]:
-              - listitem [ref=f1e461]:
-                - link "Privacy Policy" [ref=f1e462] [cursor=pointer]:
+        - generic [ref=f1e456]:
+          - generic [ref=f1e457]:
+            - generic [ref=f1e458]: Copyright © 2026 Apple Inc. All rights reserved.
+            - list [ref=f1e459]:
+              - listitem [ref=f1e460]:
+                - link "Privacy Policy" [ref=f1e461] [cursor=pointer]:
                   - /url: /in/legal/privacy/
-              - listitem [ref=f1e463]:
-                - link "Terms of Use" [ref=f1e464] [cursor=pointer]:
+              - listitem [ref=f1e462]:
+                - link "Terms of Use" [ref=f1e463] [cursor=pointer]:
                   - /url: /in/legal/terms/site.html
-              - listitem [ref=f1e465]:
-                - link "Sales Policy" [ref=f1e466] [cursor=pointer]:
+              - listitem [ref=f1e464]:
+                - link "Sales Policy" [ref=f1e465] [cursor=pointer]:
                   - /url: /in/shop/goto/help/sales_refunds
-              - listitem [ref=f1e467]:
-                - link "Legal" [ref=f1e468] [cursor=pointer]:
+              - listitem [ref=f1e466]:
+                - link "Legal" [ref=f1e467] [cursor=pointer]:
                   - /url: https://www.apple.com/in/legal/
-              - listitem [ref=f1e469]:
-                - link "Site Map" [ref=f1e470] [cursor=pointer]:
+              - listitem [ref=f1e468]:
+                - link "Site Map" [ref=f1e469] [cursor=pointer]:
                   - /url: /in/sitemap/
-          - link "India. Choose your country or region" [ref=f1e472] [cursor=pointer]:
+          - link "India. Choose your country or region" [ref=f1e471] [cursor=pointer]:
             - /url: /choose-country-region/
             - text: India
 ```
@@ -554,113 +550,113 @@ Error: Accessibility Quality Gate Failed. Critical/Serious Issues Found: 4
 # Test source
 
 ```ts
-  87  | fs.writeFileSync(
-  88  |     'multi-page-report.json',
-  89  |     JSON.stringify(allResults, null, 2)
-  90  | );
-  91  | let htmlContent = `
-  92  | <html> 
-  93  | <head> 
-  94  | <title>A11y Report</title>
-  95  | </head>
-  96  | <body>
-  97  | <h1>Accessibility Report<h1>
-  98  | `;
-  99  | 
-  100 | allResults.forEach(result => {
-  101 | 
-  102 |     htmlContent += `
-  103 |     <h2>Page: ${result.page}</h2>
-  104 |     <p>
-  105 |        <strong>Total Violations: </strong>
-  106 |        ${result.violationsCount}
-  107 |     </p> 
-  108 |      `;
-  109 | 
-  110 |      if (result.violationsCount === 0) {
-  111 |         htmlContent += `
-  112 |         <p>No Accessibility Violations Found</p>
-  113 |         `;
-  114 |      }
-  115 |      else {
-  116 |         result.violations.forEach(v => {
-  117 |             const wcagInfo = getWcagInfo(v.tags);
-  118 |             htmlContent += `
-  119 |             <h3>${v.id}</h3>
-  120 |             <p>
-  121 |             <strong>Impact: </strong>
-  122 |             ${v.impact}
-  123 |             </p>
-  124 |             <p>
-  125 |             <strong>Success Criteria:</strong>
-  126 |             ${wcagInfo.successCriteria}
-  127 |             </p>
-  128 |             <p>
-  129 |             <strong>WCAG Level:</strong>
-  130 |             ${wcagInfo.level}
-  131 |             </p>
-  132 |             <p>
-  133 |             <strong>Description:</strong>
-  134 |             ${v.description}
-  135 |             </p>
-  136 |             <p>
-  137 |             <strong>Help:</strong>
-  138 |             ${v.help}
-  139 |             </p>
-  140 |             <hr>
-  141 |             `;
-  142 |         } );
-  143 |      }
-  144 | });
-  145 | htmlContent += `
-  146 | </body>
-  147 | </html>
-  148 | `;
-  149 | 
-  150 | let accessibilityScore =
-  151 |  100 - (
-  152 |     criticalCount * 10 +
-  153 |     seriousCount * 5 +
-  154 |     moderateCount * 2 +
-  155 |     minorCount * 1
-  156 |      );
-  157 |  
-  158 |      accessibilityScore = 
-  159 |   Math.max(accessibilityScore, 0);
-  160 | 
-  161 | const summarySection = `
-  162 |   <h2>Accessibility Summary</h2>
-  163 |     <p><strong>Critical:</strong> ${criticalCount}</p>
-  164 |     <p><strong>Serious:</strong> ${seriousCount}</p>
-  165 |     <p><strong>Moderate:</strong> ${moderateCount}</p>
-  166 |     <p><strong>Minor:</strong> ${minorCount}</p>
-  167 | 
-  168 |    <p>
-  169 |      <strong>Accessibility Score:</strong>
-  170 |       ${accessibilityScore}%
-  171 |      </p>
-  172 | 
-  173 |    <p>
-  174 |      <strong>Status:</strong>
-  175 |      ${
-  176 |     criticalCount > 0 ||
-  177 |     seriousCount > 0
-  178 |     ? 'Fail'
-  179 |     : 'PASS'
-  180 |    }
-  181 |    </p>
-  182 |    <hr>
-  183 | `;
-  184 |   htmlContent = summarySection + htmlContent;
-  185 |   fs.writeFileSync('a11y-report.html', htmlContent);
-  186 |   if (totalCriticalOrSeriousIssues > 0) {
-> 187 |     throw new Error(
-      |           ^ Error: Accessibility Quality Gate Failed. Critical/Serious Issues Found: 4
-  188 |         `Accessibility Quality Gate Failed. Critical/Serious Issues Found: ${totalCriticalOrSeriousIssues}`
-  189 |     );
-  190 |   }
-  191 | 
-  192 | console.log("Accessibility Scan Started");
-  193 | console.log("Report Created Successfully");
-  194 | });
+  144 |             <p>
+  145 |             <strong>Description:</strong>
+  146 |             ${v.description}
+  147 |             </p>
+  148 |             <p>
+  149 |             <strong>Expected Result:</strong>
+  150 |             Element should satisfy accessibility requirements
+  151 |             for ${v.id}.
+  152 |             </p>
+  153 | 
+  154 |             <p>
+  155 |             <strong>Actual Result:</strong>
+  156 |             Accessibility validation failed for this element.
+  157 |             </p>
+  158 |             <p>
+  159 |             <strong>Help:</strong>
+  160 |             ${v.help}
+  161 |             </p>
+  162 |             <p>
+  163 |             <strong> Affected Element:</strong></p>
+  164 |             ${v.nodes.map(node => `
+  165 |                 
+  166 |                 <p>
+  167 |                 <strong>Target:</strong>
+  168 |                 ${node.target.join(', ')}
+  169 |                 </p>
+  170 |                 <p>
+  171 |                 <strong>HTML Snippet:</strong>
+  172 |                 </p>
+  173 |                 <pre>
+  174 |                 ${node.html
+  175 |                     .replace(/</g, '&lt;')
+  176 |                     .replace(/>/g, '&gt;')
+  177 |                 }
+  178 |                 </pre>
+  179 |                 <p>
+  180 |                 <strong>Failure Summary:</strong>
+  181 |                 </p>
+  182 |                 <pre>
+  183 |                 ${node.failureSummary || 'N/A'}
+  184 |                 </pre>
+  185 |                 `).join('')
+  186 |             }
+  187 |             <hr>
+  188 |             `;
+  189 |         } );
+  190 |      }
+  191 | });
+  192 | htmlContent += `
+  193 | </body>
+  194 | </html>
+  195 | `;
+  196 | 
+  197 | const totalViolations = 
+  198 | criticalCount +
+  199 | seriousCount +
+  200 | moderateCount +
+  201 | minorCount;
+  202 | 
+  203 | let accessibilityScore =
+  204 |  100 - (
+  205 |     criticalCount * 10 +
+  206 |     seriousCount * 5 +
+  207 |     moderateCount * 2 +
+  208 |     minorCount * 1
+  209 |      );
+  210 |  
+  211 |      accessibilityScore = 
+  212 |   Math.max(accessibilityScore, 0);
+  213 | 
+  214 | const summarySection = `
+  215 |   <h2>Accessibility Summary</h2>
+  216 |     <p><strong>Application:</strong> ${applicationName}</p>
+  217 |     <p><strong>Scan Date:</strong> ${scanDate}</p>
+  218 |     <p><strong>Pages Scanned:</strong> ${pages.length}</p>
+  219 |     <p><strong>Total Violations:</strong> ${totalViolations}</p>
+  220 |     <p><strong>Critical:</strong> ${criticalCount}</p>
+  221 |     <p><strong>Serious:</strong> ${seriousCount}</p>
+  222 |     <p><strong>Moderate:</strong> ${moderateCount}</p>
+  223 |     <p><strong>Minor:</strong> ${minorCount}</p>
+  224 | 
+  225 |    <p>
+  226 |      <strong>Accessibility Score:</strong>
+  227 |       ${accessibilityScore}%
+  228 |      </p>
+  229 | 
+  230 |    <p>
+  231 |      <strong>Status:</strong>
+  232 |      ${
+  233 |     criticalCount > 0 ||
+  234 |     seriousCount > 0
+  235 |     ? 'Fail'
+  236 |     : 'PASS'
+  237 |    }
+  238 |    </p>
+  239 |    <hr>
+  240 | `;
+  241 |   htmlContent = summarySection + htmlContent;
+  242 |   fs.writeFileSync('a11y-report.html', htmlContent);
+  243 |   if (totalCriticalOrSeriousIssues > 0) {
+> 244 |     throw new Error(
+      |           ^ Error: Accessibility Quality Gate Failed. Critical/Serious Issues Found: 6
+  245 |         `Accessibility Quality Gate Failed. Critical/Serious Issues Found: ${totalCriticalOrSeriousIssues}`
+  246 |     );
+  247 |   }
+  248 | 
+  249 | console.log("Accessibility Scan Started");
+  250 | console.log("Report Created Successfully");
+  251 | });
 ```

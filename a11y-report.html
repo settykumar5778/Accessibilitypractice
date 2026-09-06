@@ -1,13 +1,17 @@
 
   <h2>Accessibility Summary</h2>
+    <p><strong>Application:</strong> Apple Accessibility Scan</p>
+    <p><strong>Scan Date:</strong> 6/9/2026, 6:22:49 pm</p>
+    <p><strong>Pages Scanned:</strong> 2</p>
+    <p><strong>Total Violations:</strong> 10</p>
     <p><strong>Critical:</strong> 3</p>
-    <p><strong>Serious:</strong> 1</p>
+    <p><strong>Serious:</strong> 3</p>
     <p><strong>Moderate:</strong> 2</p>
-    <p><strong>Minor:</strong> 1</p>
+    <p><strong>Minor:</strong> 2</p>
 
    <p>
      <strong>Accessibility Score:</strong>
-      60%
+      49%
      </p>
 
    <p>
@@ -28,8 +32,13 @@
        <strong>Total Violations: </strong>
        4
     </p> 
+    <p>
+     <strong>Page Status:</strong>
+     FAILED
+    </p>
+
      
-            <h3>aria-allowed-role</h3>
+            <h3>Issue 1 - aria-allowed-role</h3>
             <p>
             <strong>Impact: </strong>
             minor
@@ -47,12 +56,82 @@
             Ensure role attribute has an appropriate value for the element
             </p>
             <p>
+            <strong>Expected Result:</strong>
+            Element should satisfy accessibility requirements
+            for aria-allowed-role.
+            </p>
+
+            <p>
+            <strong>Actual Result:</strong>
+            Accessibility validation failed for this element.
+            </p>
+            <p>
             <strong>Help:</strong>
             ARIA role should be appropriate for the element
             </p>
+            <p>
+            <strong> Affected Element:</strong></p>
+            
+                
+                <p>
+                <strong>Target:</strong>
+                #bts-2026
+                </p>
+                <p>
+                <strong>HTML Snippet:</strong>
+                </p>
+                <pre>
+                &lt;video id="bts-2026" muted="" preload="none" playsinline="" data-inline-media-ba...="/105/media/us/home/2..." data-inline-media-ty...="webm" data-inline-media-pl...="{"start":"t - (100vh..." aria-label="Animated cutouts of ..." role="img" src="/105/media/us/home/2..."&gt;
+                </pre>
+                <p>
+                <strong>Failure Summary:</strong>
+                </p>
+                <pre>
+                Fix any of the following:
+  ARIA role img is not allowed for given element
+                </pre>
+                
+                
+                <p>
+                <strong>Target:</strong>
+                li[data-tv-show="ted lasso"]
+                </p>
+                <p>
+                <strong>HTML Snippet:</strong>
+                </p>
+                <pre>
+                &lt;li id="endless-entertainmen..." class="media-gallery-item t..." data-media-gallery-i...="1" data-tv-show="ted lasso" data-title="Ted Lasso" data-ac-gallery-item="" data-analytics-galle...="ted lasso" data-ac-gallery-item...="4.16" role="tabpanel" aria-labelledby="endless-entertainmen..." ...&gt;
+                </pre>
+                <p>
+                <strong>Failure Summary:</strong>
+                </p>
+                <pre>
+                Fix any of the following:
+  ARIA role tabpanel is not allowed for given element
+                </pre>
+                
+                
+                <p>
+                <strong>Target:</strong>
+                .current[data-media-gallery-item="1"][data-media-gallery-item-service="music"]
+                </p>
+                <p>
+                <strong>HTML Snippet:</strong>
+                </p>
+                <pre>
+                &lt;li id="endless-entertainmen..." class="media-gallery-item t..." data-media-gallery-i...="1" data-media-gallery-i...="music" data-fam-music="sabrina carpenter: t..." data-ac-gallery-item="" data-analytics-galle...="sabrina carpenter: t..." data-ac-gallery-item...="4.16" role="tabpanel" ...&gt;
+                </pre>
+                <p>
+                <strong>Failure Summary:</strong>
+                </p>
+                <pre>
+                Fix any of the following:
+  ARIA role tabpanel is not allowed for given element
+                </pre>
+                
             <hr>
             
-            <h3>aria-required-children</h3>
+            <h3>Issue 2 - aria-required-children</h3>
             <p>
             <strong>Impact: </strong>
             critical
@@ -70,12 +149,63 @@
             Ensure elements with an ARIA role that require child roles contain them
             </p>
             <p>
+            <strong>Expected Result:</strong>
+            Element should satisfy accessibility requirements
+            for aria-required-children.
+            </p>
+
+            <p>
+            <strong>Actual Result:</strong>
+            Accessibility validation failed for this element.
+            </p>
+            <p>
             <strong>Help:</strong>
             Certain ARIA roles must contain particular children
             </p>
+            <p>
+            <strong> Affected Element:</strong></p>
+            
+                
+                <p>
+                <strong>Target:</strong>
+                #tv-media-gallery > .media-gallery-item-container[role="list"]
+                </p>
+                <p>
+                <strong>HTML Snippet:</strong>
+                </p>
+                <pre>
+                &lt;ul class="media-gallery-item-container" role="list" style="transform: translate3d(0px, 0px, 0px);"&gt;
+                </pre>
+                <p>
+                <strong>Failure Summary:</strong>
+                </p>
+                <pre>
+                Fix any of the following:
+  Element has children which are not allowed: [role=tabpanel]
+                </pre>
+                
+                
+                <p>
+                <strong>Target:</strong>
+                #fam-media-gallery > .media-gallery-item-container[role="list"]
+                </p>
+                <p>
+                <strong>HTML Snippet:</strong>
+                </p>
+                <pre>
+                &lt;ul class="media-gallery-item-container" role="list" style="transform: translate3d(0px, 0px, 0px);"&gt;
+                </pre>
+                <p>
+                <strong>Failure Summary:</strong>
+                </p>
+                <pre>
+                Fix any of the following:
+  Element has children which are not allowed: [role=tabpanel]
+                </pre>
+                
             <hr>
             
-            <h3>color-contrast</h3>
+            <h3>Issue 3 - color-contrast</h3>
             <p>
             <strong>Impact: </strong>
             serious
@@ -93,12 +223,44 @@
             Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds
             </p>
             <p>
+            <strong>Expected Result:</strong>
+            Element should satisfy accessibility requirements
+            for color-contrast.
+            </p>
+
+            <p>
+            <strong>Actual Result:</strong>
+            Accessibility validation failed for this element.
+            </p>
+            <p>
             <strong>Help:</strong>
             Elements must meet minimum color contrast ratio thresholds
             </p>
+            <p>
+            <strong> Affected Element:</strong></p>
+            
+                
+                <p>
+                <strong>Target:</strong>
+                #media-gallery-item-4 > .media-gallery-contents > .media-gallery-bottom-content > .media-gallery-button.button-neutral.button
+                </p>
+                <p>
+                <strong>HTML Snippet:</strong>
+                </p>
+                <pre>
+                &lt;div class="button button-neutral media-gallery-button" aria-hidden="true"&gt;Listen now&lt;/div&gt;
+                </pre>
+                <p>
+                <strong>Failure Summary:</strong>
+                </p>
+                <pre>
+                Fix any of the following:
+  Element has insufficient color contrast of 2.21 (foreground color: #984d88, background color: #ee79d4, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1
+                </pre>
+                
             <hr>
             
-            <h3>region</h3>
+            <h3>Issue 4 - region</h3>
             <p>
             <strong>Impact: </strong>
             moderate
@@ -116,18 +278,169 @@
             Ensure all page content is contained by landmarks
             </p>
             <p>
+            <strong>Expected Result:</strong>
+            Element should satisfy accessibility requirements
+            for region.
+            </p>
+
+            <p>
+            <strong>Actual Result:</strong>
+            Accessibility validation failed for this element.
+            </p>
+            <p>
             <strong>Help:</strong>
             All page content should be contained by landmarks
             </p>
+            <p>
+            <strong> Affected Element:</strong></p>
+            
+                
+                <p>
+                <strong>Target:</strong>
+                h1
+                </p>
+                <p>
+                <strong>HTML Snippet:</strong>
+                </p>
+                <pre>
+                &lt;h1 class="visuallyhidden"&gt;Apple&lt;/h1&gt;
+                </pre>
+                <p>
+                <strong>Failure Summary:</strong>
+                </p>
+                <pre>
+                Fix any of the following:
+  Some page content is not contained by landmarks
+                </pre>
+                
             <hr>
             
     <h2>Page: https://www.apple.com/in/tv-home</h2>
     <p>
        <strong>Total Violations: </strong>
-       3
+       6
     </p> 
+    <p>
+     <strong>Page Status:</strong>
+     FAILED
+    </p>
+
      
-            <h3>aria-required-children</h3>
+            <h3>Issue 1 - aria-allowed-role</h3>
+            <p>
+            <strong>Impact: </strong>
+            minor
+            </p>
+            <p>
+            <strong>Success Criteria:</strong>
+            N/A
+            </p>
+            <p>
+            <strong>WCAG Level:</strong>
+            Unknown
+            </p>
+            <p>
+            <strong>Description:</strong>
+            Ensure role attribute has an appropriate value for the element
+            </p>
+            <p>
+            <strong>Expected Result:</strong>
+            Element should satisfy accessibility requirements
+            for aria-allowed-role.
+            </p>
+
+            <p>
+            <strong>Actual Result:</strong>
+            Accessibility validation failed for this element.
+            </p>
+            <p>
+            <strong>Help:</strong>
+            ARIA role should be appropriate for the element
+            </p>
+            <p>
+            <strong> Affected Element:</strong></p>
+            
+                
+                <p>
+                <strong>Target:</strong>
+                #big-screen-video
+                </p>
+                <p>
+                <strong>HTML Snippet:</strong>
+                </p>
+                <pre>
+                &lt;video id="big-screen-video" class="video" muted="" playsinline="" autoplay="" loop="" data-inline-media="" data-inline-media-pl...="ViewportSource, Play..." preload="none" role="presentation" data-inline-media-ba...="/105/media/ww/tv-hom..." src="/105/media/ww/tv-hom..."&gt;
+                </pre>
+                <p>
+                <strong>Failure Summary:</strong>
+                </p>
+                <pre>
+                Fix any of the following:
+  ARIA role presentation is not allowed for given element
+                </pre>
+                
+            <hr>
+            
+            <h3>Issue 2 - aria-hidden-focus</h3>
+            <p>
+            <strong>Impact: </strong>
+            serious
+            </p>
+            <p>
+            <strong>Success Criteria:</strong>
+            4.1.2
+            </p>
+            <p>
+            <strong>WCAG Level:</strong>
+            Unknown
+            </p>
+            <p>
+            <strong>Description:</strong>
+            Ensure aria-hidden elements are not focusable nor contain focusable elements
+            </p>
+            <p>
+            <strong>Expected Result:</strong>
+            Element should satisfy accessibility requirements
+            for aria-hidden-focus.
+            </p>
+
+            <p>
+            <strong>Actual Result:</strong>
+            Accessibility validation failed for this element.
+            </p>
+            <p>
+            <strong>Help:</strong>
+            ARIA hidden element must not be focusable or contain focusable elements
+            </p>
+            <p>
+            <strong> Affected Element:</strong></p>
+            
+                
+                <p>
+                <strong>Target:</strong>
+                .inline-video-captions-container
+                </p>
+                <p>
+                <strong>HTML Snippet:</strong>
+                </p>
+                <pre>
+                &lt;div class="inline-video-captions-container" aria-hidden="true" aria-label="
+                           
+                              |The Studio
+                           
+                        "&gt;
+                </pre>
+                <p>
+                <strong>Failure Summary:</strong>
+                </p>
+                <pre>
+                Fix all of the following:
+  Focusable content should have tabindex="-1" or be removed from the DOM
+                </pre>
+                
+            <hr>
+            
+            <h3>Issue 3 - aria-required-children</h3>
             <p>
             <strong>Impact: </strong>
             critical
@@ -145,12 +458,44 @@
             Ensure elements with an ARIA role that require child roles contain them
             </p>
             <p>
+            <strong>Expected Result:</strong>
+            Element should satisfy accessibility requirements
+            for aria-required-children.
+            </p>
+
+            <p>
+            <strong>Actual Result:</strong>
+            Accessibility validation failed for this element.
+            </p>
+            <p>
             <strong>Help:</strong>
             Certain ARIA roles must contain particular children
             </p>
+            <p>
+            <strong> Affected Element:</strong></p>
+            
+                
+                <p>
+                <strong>Target:</strong>
+                .section-item-container
+                </p>
+                <p>
+                <strong>HTML Snippet:</strong>
+                </p>
+                <pre>
+                &lt;ul class="section-item-container item-container" role="list" style="--slide-min-height: 480px; height: 480px; transform: translate3d(0px, 0px, 0px);"&gt;
+                </pre>
+                <p>
+                <strong>Failure Summary:</strong>
+                </p>
+                <pre>
+                Fix any of the following:
+  Element has children which are not allowed: h4, a[aria-label], img
+                </pre>
+                
             <hr>
             
-            <h3>aria-valid-attr</h3>
+            <h3>Issue 4 - aria-valid-attr</h3>
             <p>
             <strong>Impact: </strong>
             critical
@@ -168,12 +513,99 @@
             Ensure attributes that begin with aria- are valid ARIA attributes
             </p>
             <p>
+            <strong>Expected Result:</strong>
+            Element should satisfy accessibility requirements
+            for aria-valid-attr.
+            </p>
+
+            <p>
+            <strong>Actual Result:</strong>
+            Accessibility validation failed for this element.
+            </p>
+            <p>
             <strong>Help:</strong>
             ARIA attributes must conform to valid names
             </p>
+            <p>
+            <strong> Affected Element:</strong></p>
+            
+                
+                <p>
+                <strong>Target:</strong>
+                .play-pause-button
+                </p>
+                <p>
+                <strong>HTML Snippet:</strong>
+                </p>
+                <pre>
+                &lt;button class="play-pause-button lo..." data-aria-playing="pause big screen vid..." data-aria-paused="play big screen vide..." aria-playing="pause big screen vid..." aria-paused="play big screen vide..." aria-label="pause big screen vid..." data-inline-media-co...="big-screen-video" ...&gt;
+                </pre>
+                <p>
+                <strong>Failure Summary:</strong>
+                </p>
+                <pre>
+                Fix any of the following:
+  Invalid ARIA attribute names: aria-playing, aria-paused
+                </pre>
+                
             <hr>
             
-            <h3>heading-order</h3>
+            <h3>Issue 5 - color-contrast</h3>
+            <p>
+            <strong>Impact: </strong>
+            serious
+            </p>
+            <p>
+            <strong>Success Criteria:</strong>
+            1.4.3
+            </p>
+            <p>
+            <strong>WCAG Level:</strong>
+            AA
+            </p>
+            <p>
+            <strong>Description:</strong>
+            Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds
+            </p>
+            <p>
+            <strong>Expected Result:</strong>
+            Element should satisfy accessibility requirements
+            for color-contrast.
+            </p>
+
+            <p>
+            <strong>Actual Result:</strong>
+            Accessibility validation failed for this element.
+            </p>
+            <p>
+            <strong>Help:</strong>
+            Elements must meet minimum color contrast ratio thresholds
+            </p>
+            <p>
+            <strong> Affected Element:</strong></p>
+            
+                
+                <p>
+                <strong>Target:</strong>
+                a[data-analytics-title="buy homepod mini"]
+                </p>
+                <p>
+                <strong>HTML Snippet:</strong>
+                </p>
+                <pre>
+                &lt;a href="/in/shop/goto/buy_homepod/homepod_mini" data-analytics-title="buy homepod mini" aria-label="buy homepod mini" class="button button-elevated"&gt;Buy&lt;/a&gt;
+                </pre>
+                <p>
+                <strong>Failure Summary:</strong>
+                </p>
+                <pre>
+                Fix any of the following:
+  Element has insufficient color contrast of 4.31 (foreground color: #fefeff, background color: #0d78e4, font size: 12.8pt (17px), font weight: normal). Expected contrast ratio of 4.5:1
+                </pre>
+                
+            <hr>
+            
+            <h3>Issue 6 - heading-order</h3>
             <p>
             <strong>Impact: </strong>
             moderate
@@ -191,9 +623,79 @@
             Ensure the order of headings is semantically correct
             </p>
             <p>
+            <strong>Expected Result:</strong>
+            Element should satisfy accessibility requirements
+            for heading-order.
+            </p>
+
+            <p>
+            <strong>Actual Result:</strong>
+            Accessibility validation failed for this element.
+            </p>
+            <p>
             <strong>Help:</strong>
             Heading levels should only increase by one
             </p>
+            <p>
+            <strong> Affected Element:</strong></p>
+            
+                
+                <p>
+                <strong>Target:</strong>
+                .theme-dark > .tile-content > .copy-wrapper > .tile-headline.typography-product-tile-headline
+                </p>
+                <p>
+                <strong>HTML Snippet:</strong>
+                </p>
+                <pre>
+                &lt;h3 class="tile-headline typography-product-tile-headline"&gt;Profound sound.&lt;/h3&gt;
+                </pre>
+                <p>
+                <strong>Failure Summary:</strong>
+                </p>
+                <pre>
+                Fix any of the following:
+  Heading order invalid
+                </pre>
+                
+                
+                <p>
+                <strong>Target:</strong>
+                #control > .tile.tile-rounded.tile-content > .tile-wrapper > h4
+                </p>
+                <p>
+                <strong>HTML Snippet:</strong>
+                </p>
+                <pre>
+                &lt;h4 class="section-headline typography-gallery-tile-headline"&gt;Easily control your home&lt;br&gt; from anywhere with your&lt;br&gt; favourite devices.&lt;/h4&gt;
+                </pre>
+                <p>
+                <strong>Failure Summary:</strong>
+                </p>
+                <pre>
+                Fix any of the following:
+  Heading order invalid
+                </pre>
+                
+                
+                <p>
+                <strong>Target:</strong>
+                h5
+                </p>
+                <p>
+                <strong>HTML Snippet:</strong>
+                </p>
+                <pre>
+                &lt;h5 class="ac-gf-buystrip-info-title"&gt;Ways to buy&lt;/h5&gt;
+                </pre>
+                <p>
+                <strong>Failure Summary:</strong>
+                </p>
+                <pre>
+                Fix any of the following:
+  Heading order invalid
+                </pre>
+                
             <hr>
             
 </body>

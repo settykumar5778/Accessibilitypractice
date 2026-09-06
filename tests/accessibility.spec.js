@@ -1,6 +1,9 @@
 const { test } = require('@playwright/test');
 const AxeBuilder = require('@axe-core/playwright').default;
 const fs = require ('fs');
+const applicationName = 'Apple Accessibility Scan';
+const scanDate =
+    new Date().toLocaleString();
 function getWcagInfo(tags) {
 
     const wcagTag = 
@@ -105,6 +108,15 @@ allResults.forEach(result => {
        <strong>Total Violations: </strong>
        ${result.violationsCount}
     </p> 
+    <p>
+     <strong>Page Status:</strong>
+     ${
+        result.violationsCount > 0
+        ? 'FAILED'
+        : 'PASSED'
+     }
+    </p>
+
      `;
 
      if (result.violationsCount === 0) {
@@ -113,10 +125,10 @@ allResults.forEach(result => {
         `;
      }
      else {
-        result.violations.forEach(v => {
+        result.violations.forEach((v, index) => {
             const wcagInfo = getWcagInfo(v.tags);
             htmlContent += `
-            <h3>${v.id}</h3>
+            <h3>Issue ${index + 1} - ${v.id}</h3>
             <p>
             <strong>Impact: </strong>
             ${v.impact}
@@ -134,9 +146,44 @@ allResults.forEach(result => {
             ${v.description}
             </p>
             <p>
+            <strong>Expected Result:</strong>
+            Element should satisfy accessibility requirements
+            for ${v.id}.
+            </p>
+
+            <p>
+            <strong>Actual Result:</strong>
+            Accessibility validation failed for this element.
+            </p>
+            <p>
             <strong>Help:</strong>
             ${v.help}
             </p>
+            <p>
+            <strong> Affected Element:</strong></p>
+            ${v.nodes.map(node => `
+                
+                <p>
+                <strong>Target:</strong>
+                ${node.target.join(', ')}
+                </p>
+                <p>
+                <strong>HTML Snippet:</strong>
+                </p>
+                <pre>
+                ${node.html
+                    .replace(/</g, '&lt;')
+                    .replace(/>/g, '&gt;')
+                }
+                </pre>
+                <p>
+                <strong>Failure Summary:</strong>
+                </p>
+                <pre>
+                ${node.failureSummary || 'N/A'}
+                </pre>
+                `).join('')
+            }
             <hr>
             `;
         } );
@@ -146,6 +193,12 @@ htmlContent += `
 </body>
 </html>
 `;
+
+const totalViolations = 
+criticalCount +
+seriousCount +
+moderateCount +
+minorCount;
 
 let accessibilityScore =
  100 - (
@@ -160,6 +213,10 @@ let accessibilityScore =
 
 const summarySection = `
   <h2>Accessibility Summary</h2>
+    <p><strong>Application:</strong> ${applicationName}</p>
+    <p><strong>Scan Date:</strong> ${scanDate}</p>
+    <p><strong>Pages Scanned:</strong> ${pages.length}</p>
+    <p><strong>Total Violations:</strong> ${totalViolations}</p>
     <p><strong>Critical:</strong> ${criticalCount}</p>
     <p><strong>Serious:</strong> ${seriousCount}</p>
     <p><strong>Moderate:</strong> ${moderateCount}</p>
