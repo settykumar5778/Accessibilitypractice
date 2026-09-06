@@ -29,7 +29,7 @@
             "all": [],
             "none": [],
             "impact": "minor",
-            "html": "<video id=\"bts-2026\" muted=\"\" preload=\"none\" playsinline=\"\" data-inline-media-ba...=\"/105/media/us/home/2...\" data-inline-media-ty...=\"webm\" data-inline-media-pl...=\"{\"start\":\"t - (100vh...\" aria-label=\"Animated cutouts of ...\" role=\"img\" src=\"/105/media/us/home/2...\">",
+            "html": "<video id=\"bts-2026\" muted=\"\" preload=\"none\" playsinline=\"\" data-inline-media-ba...=\"/105/media/us/home/2...\" data-inline-media-ty...=\"webm\" data-inline-media-pl...=\"{\"start\":\"t - (100vh...\" aria-label=\"Animated cutouts of ...\" role=\"img\">",
             "target": [
               "#bts-2026"
             ],
@@ -243,6 +243,229 @@
               "h1"
             ],
             "failureSummary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "page": "https://www.apple.com/in/tv-home",
+    "violationsCount": 3,
+    "violations": [
+      {
+        "id": "aria-required-children",
+        "impact": "critical",
+        "tags": [
+          "cat.aria",
+          "wcag2a",
+          "wcag131",
+          "EN-301-549",
+          "EN-9.1.3.1",
+          "RGAAv4",
+          "RGAA-9.3.1"
+        ],
+        "description": "Ensure elements with an ARIA role that require child roles contain them",
+        "help": "Certain ARIA roles must contain particular children",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/aria-required-children?application=playwright",
+        "nodes": [
+          {
+            "any": [
+              {
+                "id": "aria-required-children",
+                "data": {
+                  "messageKey": "unallowed",
+                  "values": "h4, a[aria-label], img"
+                },
+                "relatedNodes": [
+                  {
+                    "html": "<h4 class=\"section-headline typography-gallery-tile-headline\">Easily control your home<br> from anywhere with your<br> favourite devices.</h4>",
+                    "target": [
+                      "#control > .tile.tile-rounded.tile-content > .tile-wrapper > h4"
+                    ]
+                  },
+                  {
+                    "html": "<a href=\"/in/home-app/\" data-analytics-title=\"learn more about the home app\" aria-label=\"learn more about the home app\" class=\"icon-wrapper section-cta typography-cta typography-gallery-tile-cta\">",
+                    "target": [
+                      "a[data-analytics-title=\"learn more about the home app\"]"
+                    ]
+                  },
+                  {
+                    "html": "<h4 class=\"section-headline typography-gallery-tile-headline\">Seamlessly connected entertainment in every&nbsp;room.</h4>",
+                    "target": [
+                      "#connect > .tile.tile-rounded.tile-content > .tile-wrapper > h4"
+                    ]
+                  },
+                  {
+                    "html": "<a href=\"/in/homepod/\" data-analytics-title=\"learn more about homepod\" aria-label=\"learn more about homepod\" class=\"icon-wrapper section-cta typography-cta typography-gallery-tile-cta\"><span class=\"icon-copy\">Learn more about&nbsp;HomePod</span><span class=\"icon icon-after more\"></span></a>",
+                    "target": [
+                      "a[href$=\"homepod/\"]"
+                    ]
+                  },
+                  {
+                    "html": "<h4 class=\"section-headline typography-gallery-tile-headline\">Run it all with your voice.</h4>",
+                    "target": [
+                      "#siri > .tile.tile-rounded.tile-content > .tile-wrapper > h4"
+                    ]
+                  },
+                  {
+                    "html": "<a href=\"/in/siri/\" data-analytics-title=\"learn more about siri\" aria-label=\"learn more about siri\" class=\"icon-wrapper section-cta typography-cta typography-gallery-tile-cta\"><span class=\"icon-copy\">Learn more about&nbsp;Siri</span><span class=\"icon icon-after more\"></span></a>",
+                    "target": [
+                      "a[href$=\"siri/\"]"
+                    ]
+                  },
+                  {
+                    "html": "<h4 class=\"section-headline typography-gallery-tile-headline\">All with the security <br> and privacy of Apple.</h4>",
+                    "target": [
+                      "#secure > .tile.tile-rounded.tile-content > .tile-wrapper > h4"
+                    ]
+                  },
+                  {
+                    "html": "<a href=\"/in/privacy/\" data-analytics-title=\"learn more about privacy\" aria-label=\"learn more about privacy\" class=\"icon-wrapper section-cta typography-cta typography-gallery-tile-cta\"><span class=\"icon-copy\">Learn more about Privacy</span><span class=\"icon icon-after more\"></span></a>",
+                    "target": [
+                      "a[data-analytics-title=\"learn more about privacy\"]"
+                    ]
+                  },
+                  {
+                    "html": "<img src=\"/in/tv-home/images/overview/smart_control__dsa6v8m1pp0m_large.jpg\" onload=\"__lp(event)\" alt=\"A Midnight HomePod with iPhone showing 'My Home' UI on the Home app\">",
+                    "target": [
+                      "#overview-smart-control-1 > img[onload=\"__lp(event)\"]"
+                    ]
+                  },
+                  {
+                    "html": "<img src=\"/v/tv-home/q/images/overview/smart_connect__d8o6agoqfh0m_large.jpg\" onload=\"__lp(event)\" alt=\"Floor plan showing a HomePod or HomePod mini in multiple rooms\">",
+                    "target": [
+                      "#overview-smart-connect-1 > img[onload=\"__lp(event)\"]"
+                    ]
+                  },
+                  {
+                    "html": "<img src=\"/in/tv-home/images/overview/security_and_privacy__bzlguj2x29jm_large.jpg\" onload=\"__lp(event)\" alt=\"Apple privacy icon\">",
+                    "target": [
+                      "img[alt=\"Apple privacy icon\"]"
+                    ]
+                  }
+                ],
+                "impact": "critical",
+                "message": "Element has children which are not allowed: h4, a[aria-label], img"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": "critical",
+            "html": "<ul class=\"section-item-container item-container\" role=\"list\">",
+            "target": [
+              ".section-item-container"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has children which are not allowed: h4, a[aria-label], img"
+          }
+        ]
+      },
+      {
+        "id": "aria-valid-attr",
+        "impact": "critical",
+        "tags": [
+          "cat.aria",
+          "wcag2a",
+          "wcag412",
+          "EN-301-549",
+          "EN-9.4.1.2",
+          "RGAAv4",
+          "RGAA-7.1.1"
+        ],
+        "description": "Ensure attributes that begin with aria- are valid ARIA attributes",
+        "help": "ARIA attributes must conform to valid names",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/aria-valid-attr?application=playwright",
+        "nodes": [
+          {
+            "any": [
+              {
+                "id": "aria-valid-attr",
+                "data": [
+                  "aria-playing",
+                  "aria-paused"
+                ],
+                "relatedNodes": [],
+                "impact": "critical",
+                "message": "Invalid ARIA attribute names: aria-playing, aria-paused"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": "critical",
+            "html": "<button class=\"play-pause-button\" data-aria-playing=\"pause big screen vid...\" data-aria-paused=\"play big screen vide...\" aria-playing=\"pause big screen vid...\" aria-paused=\"play big screen vide...\" aria-label=\"play big screen vide...\" data-inline-media-co...=\"big-screen-video\" ...>",
+            "target": [
+              ".play-pause-button"
+            ],
+            "failureSummary": "Fix any of the following:\n  Invalid ARIA attribute names: aria-playing, aria-paused"
+          }
+        ]
+      },
+      {
+        "id": "heading-order",
+        "impact": "moderate",
+        "tags": [
+          "cat.semantics",
+          "best-practice"
+        ],
+        "description": "Ensure the order of headings is semantically correct",
+        "help": "Heading levels should only increase by one",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/heading-order?application=playwright",
+        "nodes": [
+          {
+            "any": [
+              {
+                "id": "heading-order",
+                "data": null,
+                "relatedNodes": [],
+                "impact": "moderate",
+                "message": "Heading order invalid"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": "moderate",
+            "html": "<h3 class=\"tile-headline typography-product-tile-headline\">Profound sound.</h3>",
+            "target": [
+              ".theme-dark > .tile-content > .copy-wrapper > .tile-headline.typography-product-tile-headline"
+            ],
+            "failureSummary": "Fix any of the following:\n  Heading order invalid"
+          },
+          {
+            "any": [
+              {
+                "id": "heading-order",
+                "data": null,
+                "relatedNodes": [],
+                "impact": "moderate",
+                "message": "Heading order invalid"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": "moderate",
+            "html": "<h4 class=\"section-headline typography-gallery-tile-headline\">Easily control your home<br> from anywhere with your<br> favourite devices.</h4>",
+            "target": [
+              "#control > .tile.tile-rounded.tile-content > .tile-wrapper > h4"
+            ],
+            "failureSummary": "Fix any of the following:\n  Heading order invalid"
+          },
+          {
+            "any": [
+              {
+                "id": "heading-order",
+                "data": null,
+                "relatedNodes": [],
+                "impact": "moderate",
+                "message": "Heading order invalid"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": "moderate",
+            "html": "<h5 class=\"ac-gf-buystrip-info-title\">Ways to buy</h5>",
+            "target": [
+              "h5"
+            ],
+            "failureSummary": "Fix any of the following:\n  Heading order invalid"
           }
         ]
       }
