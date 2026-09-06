@@ -1,6 +1,7 @@
 const { test } = require('@playwright/test');
 const AxeBuilder = require('@axe-core/playwright').default;
 const fs = require ('fs');
+const reportId = `A11y-${Date.now()}`;
 const applicationName = 'Apple Accessibility Scan';
 const scanDate =
     new Date().toLocaleString();
@@ -147,21 +148,21 @@ allResults.forEach(result => {
             </p>
             <p>
             <strong>Expected Result:</strong>
-            Element should satisfy accessibility requirements
-            for ${v.id}.
-            </p>
-
-            <p>
-            <strong>Actual Result:</strong>
-            Accessibility validation failed for this element.
+            ${v.help}.
             </p>
             <p>
             <strong>Help:</strong>
             ${v.help}
             </p>
             <p>
+            <strong>Help URL:</strong>
+            ${v.helpUrl}
+            ${v.helpUrl}
+            </a>
+            </p>
+            <p>
             <strong> Affected Element:</strong></p>
-            ${v.nodes.map(node => `
+            ${v.nodes.map((node, nodeIndex) => `
                 
                 <p>
                 <strong>Target:</strong>
@@ -182,6 +183,19 @@ allResults.forEach(result => {
                 <pre>
                 ${node.failureSummary || 'N/A'}
                 </pre>
+                <p>
+                <strong>Actual Result:</strong>
+                </p>
+                <pre>
+                ${node.failureSummary || 'N/A'}
+                </pre>
+                <p>
+                <strong>Fix Recommendation:</strong>
+                </p>
+                <p>Review and follow the remediation guidance:</p>
+                <p>
+                ${v.helpURL}
+                </p>
                 `).join('')
             }
             <hr>
@@ -213,6 +227,7 @@ let accessibilityScore =
 
 const summarySection = `
   <h2>Accessibility Summary</h2>
+    <p><strong>Report ID:</strong> ${reportId}</p>
     <p><strong>Application:</strong> ${applicationName}</p>
     <p><strong>Scan Date:</strong> ${scanDate}</p>
     <p><strong>Pages Scanned:</strong> ${pages.length}</p>

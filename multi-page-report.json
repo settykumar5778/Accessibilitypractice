@@ -250,88 +250,8 @@
   },
   {
     "page": "https://www.apple.com/in/tv-home",
-    "violationsCount": 6,
+    "violationsCount": 3,
     "violations": [
-      {
-        "id": "aria-allowed-role",
-        "impact": "minor",
-        "tags": [
-          "cat.aria",
-          "best-practice"
-        ],
-        "description": "Ensure role attribute has an appropriate value for the element",
-        "help": "ARIA role should be appropriate for the element",
-        "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/aria-allowed-role?application=playwright",
-        "nodes": [
-          {
-            "any": [
-              {
-                "id": "aria-allowed-role",
-                "data": [
-                  "presentation"
-                ],
-                "relatedNodes": [],
-                "impact": "minor",
-                "message": "ARIA role presentation is not allowed for given element"
-              }
-            ],
-            "all": [],
-            "none": [],
-            "impact": "minor",
-            "html": "<video id=\"big-screen-video\" class=\"video\" muted=\"\" playsinline=\"\" autoplay=\"\" loop=\"\" data-inline-media=\"\" data-inline-media-pl...=\"ViewportSource, Play...\" preload=\"none\" role=\"presentation\" data-inline-media-ba...=\"/105/media/ww/tv-hom...\" src=\"/105/media/ww/tv-hom...\">",
-            "target": [
-              "#big-screen-video"
-            ],
-            "failureSummary": "Fix any of the following:\n  ARIA role presentation is not allowed for given element"
-          }
-        ]
-      },
-      {
-        "id": "aria-hidden-focus",
-        "impact": "serious",
-        "tags": [
-          "cat.name-role-value",
-          "wcag2a",
-          "wcag412",
-          "TTv5",
-          "TT6.a",
-          "EN-301-549",
-          "EN-9.4.1.2",
-          "RGAAv4",
-          "RGAA-10.8.1"
-        ],
-        "description": "Ensure aria-hidden elements are not focusable nor contain focusable elements",
-        "help": "ARIA hidden element must not be focusable or contain focusable elements",
-        "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/aria-hidden-focus?application=playwright",
-        "nodes": [
-          {
-            "any": [],
-            "all": [
-              {
-                "id": "focusable-not-tabbable",
-                "data": null,
-                "relatedNodes": [
-                  {
-                    "html": "<a href=\"https://tv.apple.com/in/show/the-studio/umc.cmc.7518algxc4lsoobtsx30dqb52?itscg=10000&amp;itsct=atv--services-stream4-apl-250915\" data-analytics-title=\"the studio\" data-rid-relay=\"{&quot;289&quot;:&quot;itsct&quot;}\" data-analytics-exit-link=\"\">The Studio</a>",
-                    "target": [
-                      "a[data-analytics-title=\"the studio\"]"
-                    ]
-                  }
-                ],
-                "impact": "serious",
-                "message": "Focusable content should have tabindex=\"-1\" or be removed from the DOM"
-              }
-            ],
-            "none": [],
-            "impact": "serious",
-            "html": "<div class=\"inline-video-captions-container\" aria-hidden=\"true\" aria-label=\"\n                           \n                              |The Studio\n                           \n                        \">",
-            "target": [
-              ".inline-video-captions-container"
-            ],
-            "failureSummary": "Fix all of the following:\n  Focusable content should have tabindex=\"-1\" or be removed from the DOM"
-          }
-        ]
-      },
       {
         "id": "aria-required-children",
         "impact": "critical",
@@ -431,7 +351,7 @@
             "all": [],
             "none": [],
             "impact": "critical",
-            "html": "<ul class=\"section-item-container item-container\" role=\"list\" style=\"--slide-min-height: 480px; height: 480px; transform: translate3d(0px, 0px, 0px);\">",
+            "html": "<ul class=\"section-item-container item-container\" role=\"list\">",
             "target": [
               ".section-item-container"
             ],
@@ -471,66 +391,11 @@
             "all": [],
             "none": [],
             "impact": "critical",
-            "html": "<button class=\"play-pause-button lo...\" data-aria-playing=\"pause big screen vid...\" data-aria-paused=\"play big screen vide...\" aria-playing=\"pause big screen vid...\" aria-paused=\"play big screen vide...\" aria-label=\"pause big screen vid...\" data-inline-media-co...=\"big-screen-video\" ...>",
+            "html": "<button class=\"play-pause-button\" data-aria-playing=\"pause big screen vid...\" data-aria-paused=\"play big screen vide...\" aria-playing=\"pause big screen vid...\" aria-paused=\"play big screen vide...\" aria-label=\"play big screen vide...\" data-inline-media-co...=\"big-screen-video\" ...>",
             "target": [
               ".play-pause-button"
             ],
             "failureSummary": "Fix any of the following:\n  Invalid ARIA attribute names: aria-playing, aria-paused"
-          }
-        ]
-      },
-      {
-        "id": "color-contrast",
-        "impact": "serious",
-        "tags": [
-          "cat.color",
-          "wcag2aa",
-          "wcag143",
-          "TTv5",
-          "TT13.c",
-          "EN-301-549",
-          "EN-9.1.4.3",
-          "ACT",
-          "RGAAv4",
-          "RGAA-3.2.1"
-        ],
-        "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
-        "help": "Elements must meet minimum color contrast ratio thresholds",
-        "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=playwright",
-        "nodes": [
-          {
-            "any": [
-              {
-                "id": "color-contrast",
-                "data": {
-                  "fgColor": "#fefeff",
-                  "bgColor": "#0d78e4",
-                  "contrastRatio": 4.31,
-                  "fontSize": "12.8pt (17px)",
-                  "fontWeight": "normal",
-                  "messageKey": null,
-                  "expectedContrastRatio": "4.5:1"
-                },
-                "relatedNodes": [
-                  {
-                    "html": "<a href=\"/in/shop/goto/buy_homepod/homepod_mini\" data-analytics-title=\"buy homepod mini\" aria-label=\"buy homepod mini\" class=\"button button-elevated\">Buy</a>",
-                    "target": [
-                      "a[data-analytics-title=\"buy homepod mini\"]"
-                    ]
-                  }
-                ],
-                "impact": "serious",
-                "message": "Element has insufficient color contrast of 4.31 (foreground color: #fefeff, background color: #0d78e4, font size: 12.8pt (17px), font weight: normal). Expected contrast ratio of 4.5:1"
-              }
-            ],
-            "all": [],
-            "none": [],
-            "impact": "serious",
-            "html": "<a href=\"/in/shop/goto/buy_homepod/homepod_mini\" data-analytics-title=\"buy homepod mini\" aria-label=\"buy homepod mini\" class=\"button button-elevated\">Buy</a>",
-            "target": [
-              "a[data-analytics-title=\"buy homepod mini\"]"
-            ],
-            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.31 (foreground color: #fefeff, background color: #0d78e4, font size: 12.8pt (17px), font weight: normal). Expected contrast ratio of 4.5:1"
           }
         ]
       },
