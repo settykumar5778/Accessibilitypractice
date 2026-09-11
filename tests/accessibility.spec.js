@@ -262,5 +262,5 @@ const summarySection = `
   }
 
 console.log("Accessibility Scan Started");
-console.log("Report Created Successfully");
+console.log("Report Created Successful");
 });
